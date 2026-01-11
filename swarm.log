@@ -1,0 +1,17 @@
+/Users/ratimics/develop/factorio-mcp/swarm_server.py:605: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+INFO:     Started server process [94199]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8888 (Press CTRL+C to quit)
+🚀 Swarm Event Server started
+   RCON Backend: http://localhost:8000
+INFO:     127.0.0.1:54766 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54785 - "POST /agents/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54850 - "POST /agents/agent_79242cf2/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54869 - "GET /events?limit=10 HTTP/1.1" 200 OK

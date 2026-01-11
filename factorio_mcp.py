@@ -4,12 +4,16 @@ from fastmcp import FastMCP
 import httpx
 import os
 from typing import Optional, List, Union, Dict
+from dotenv import load_dotenv
 
-# Create MCP server with httpx dependency
-mcp = FastMCP("Factorio Server", dependencies=["httpx"])
+# Load environment variables
+load_dotenv()
+
+# Create MCP server
+mcp = FastMCP("Factorio Server")
 
 # Configuration for the RCON backend 
-BACKEND_URL = "http://factorio.towerhouse.london:8000"
+BACKEND_URL = os.environ.get("BACKEND_URL", "http://localhost:8000")
 
 @mcp.tool()
 def execute_command(command: str) -> str:

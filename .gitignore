@@ -27,3 +27,5 @@ build/
 # Operating System
 .DS_Store
 Thumbs.db
+server-data/*
+backend.log
